@@ -1,0 +1,47 @@
+<div class="jumbotron">
+    <div class="contenedor">
+      <div class="media producto" *ngFor="let producto of listaProductos; index as i">  
+          <div class="card">
+              <img [src]="producto.foto" class="card-img-top" height="200px" width="5000px">
+              <h5 class="card-title">{{producto.item}}</h5>
+              <div class="card-body">
+                <p class="card-text">Stock: x{{producto.stock}}</p>
+                <p class="card-text"><small class="text-muted"><i class="fas fa-tag"></i> ${{producto.precio}}</small></p>
+                <div class="contenedorBtn">
+                  <button class="btn btn-danger" (click)="agrandarProducto(producto)"><i class="fas fa-eye"></i></button>
+                  <button *ngIf="this.datosSesionPost.logueado==true" class="btn btn-success" (click)="comprarProducto(producto)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+              </div>
+          </div>
+      </div>
+      
+  <button *ngIf="this.datosSesionPost.logueado==true" class="btn btn-info btnCarrito" data-toggle="modal" data-target="#myModal"><i class="fas fa-shopping-cart"></i></button>
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">  
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Precio Total: ${{ precioTotal }}</h4>
+            </div>
+            <div class="modal-body">
+              <div class="media producto" *ngFor="let producto of datosSesionPost.carrito; index as i">  
+                  <div class="card">
+                      <img [src]="producto.foto" class="card-img-top" height="200px" width="5000px">
+                      <h5 class="card-title">{{producto.item}}</h5>
+                      <div class="card-body">
+                        <p class="card-text">Stock: x{{producto.stock}}</p>
+                        <p class="card-text"><small class="text-muted"><i class="fas fa-tag"></i> ${{producto.precio}}</small></p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>          
+        </div>
+      </div>
+  </div>
+</div>

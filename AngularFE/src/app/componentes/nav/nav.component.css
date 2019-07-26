@@ -1,0 +1,33 @@
+.navbar{
+    background-color:white;
+    display:flex;
+}
+.bordes{
+    border-top: 2px solid rgb(214, 214, 214);
+    border-bottom: 2px solid rgb(202, 199, 199);
+}
+ul{    
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-end;
+}
+span p{
+    background-color:rgb(252, 217, 223);
+    color:rgb(128, 116, 85);
+    letter-spacing: 0.05em;
+    margin:0;
+    text-align:center;
+    padding:0.57%;
+}
+#mayori{
+    font-size:1.2rem;
+    color:red;
+    letter-spacing: -0.05em;
+    font-weight: 10;
+    text-align:right;
+    margin:0;
+}
+#mayori p{
+    color:black;
+    font-size:0.8rem;
+}

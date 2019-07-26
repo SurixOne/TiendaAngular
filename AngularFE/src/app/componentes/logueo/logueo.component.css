@@ -1,0 +1,9 @@
+.jumbotron{
+    background: rgb(124, 177, 179);
+    text-align:center;
+    color:white;
+}
+input[type=text], input[type=password]{
+    width:50%;
+    margin:auto;
+}

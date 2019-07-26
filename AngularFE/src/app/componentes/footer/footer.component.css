@@ -1,0 +1,93 @@
+footer, p, div{
+    margin:0;
+}
+footer .negro p{
+    color:rgb(199, 199, 199);
+    margin-right:8%;
+    padding: 1.5% 1% 0.8% 0.8%;
+    font-size: 0.7rem;
+    font-weight: 10em;
+}
+button{
+    border: 2px solid rgb(255, 90, 126);
+    background-color:transparent;
+    width:fit-content;
+    padding: 0.8% 1% 0.8% 0.8%;
+    font-size:0.7rem;
+    color:white;
+    font-weight: bold;
+    letter-spacing: 0.4em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.distancia{
+    display:flex;
+    flex-direction: row;
+    float:center;
+    justify-content: center;
+}
+.wpp{
+    background:rgb(77, 182, 77);
+    padding:20px;
+    border-radius:100%;
+    bottom:1.25%;
+    right:0.5%;
+    position:fixed;
+}
+.wpp img{
+    width:50px;
+    height:50px;
+}
+footer .rosa input, footer .rosa p, footer .rosa img, footer .rosa form{
+    float:left;
+}
+footer .rosa p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: rgb(85, 84, 84);
+    font-size:0.8rem;
+    padding-bottom:1%;
+    text-align: center;
+    margin-top:5%;
+    letter-spacing: 0.5em;
+}
+footer .negro{
+    background-color:rgb(53, 53, 53);
+}
+footer .rosa{
+    display:flex;
+    flex-direction:row;
+    overflow: hidden;
+    justify-content: space-between;
+    padding:4% 8% 4% 8%;
+    background-color:rgb(253, 215, 222);
+    justify-content: space-between;
+}
+input{
+    border:1.5px solid rgb(252, 73, 88);
+}
+input[type=submit]{
+    background-color:rgb(252, 73, 88);
+    color:white;
+}
+input[type=text]{
+    padding:1%;
+}
+input::placeholder{
+    color:rgb(99, 97, 97);
+}
+.span{
+    margin-right:0;
+}
+form{    
+    display:flex;
+    flex-direction:column;
+    overflow: hidden;
+    justify-content: center;
+}
+.tarjetas img{
+    height:45px;
+}
+a{
+    color:rgb(252, 73, 88);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

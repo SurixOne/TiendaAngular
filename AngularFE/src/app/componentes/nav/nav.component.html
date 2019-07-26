@@ -1,0 +1,38 @@
+<span><p>retira tu pedido gratis por recoleta - las compras mayores a $1800 tienen envio gratis a todo el pais :)</p></span>
+<nav class="navbar navbar-expand">
+  <a class="navbar-brand m-0 p-0 ml-3" routerLink="/">
+    <img src="https://d26lpennugtm8s.cloudfront.net/stores/093/210/themes/common/logo-373114870-1536147536-2b73a28851dfe69e8056c0f412b2734a1536147536.jpg?0" alt="">
+  </a>
+  <div class="ml-auto" id="mayori">
+    <p>carrito</p>
+    <a>MAYORISTAS</a><br>
+    <a>PUNTOS DE VENTA</a>
+  </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light sticky-top bordes">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li *ngIf="!datosSesionPost.logueado" class="nav-item">
+          <a class="nav-link" routerLink="/ingreso" routerLinkActive="active" href="#ruter">Registrarme</a>
+        </li>
+        <li *ngIf="datosSesionPost.logueado" class="nav-item">
+          <a class="nav-link" routerLink="/section" routerLinkActive="active" href="#ruter">Administrar Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/productos" routerLinkActive="active" href="#ruter">Productos</a>
+        </li>
+        <li *ngIf="!datosSesionPost.logueado" class="nav-item">
+          <a class="nav-link" routerLink="/logueo" routerLinkActive="active" href="#ruter">Loguearme</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+<app-carousel></app-carousel>
+<div id="ruter">
+  <section>
+    <router-outlet></router-outlet>
+  </section>
+</div>

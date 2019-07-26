@@ -1,0 +1,47 @@
+<div class="jumbotron">
+  <nav class="row text-light sticky-top">
+    <div class="col-2">
+      <div class="my-4"></div>
+      <button class="btn btn-success mx-2" (click)="obtenerProductos()"><i class="fas fa-search"></i></button>
+    </div>
+
+    <div class="col-2">
+      Item <br>
+      <input class="form-control" type="text" [(ngModel)]="datosProductosPost.item">
+    </div>
+    <div class="col-2">
+      Stock <br>
+      <input class="form-control" type="text" [(ngModel)]="datosProductosPost.stock">
+    </div>
+    <div class="col-2">
+      Precio <br>
+      <input class="form-control" type="text" [(ngModel)]="datosProductosPost.precio">
+    </div>
+
+    <div class="col-2">
+      Foto <br>
+      <input class="form-control" type="text" [(ngModel)]="datosProductosPost.foto">
+    </div>
+    <div class="col-2">
+      <div class="my-4"></div>
+      <button class="btn btn-primary mx-2" (click)="guardarProducto()"><i class="fas fa-save"></i></button>
+    </div>
+  </nav>
+  <hr>
+  <div class="contenedor">
+    <div class="media producto" *ngFor="let producto of listaProductos; index as i">    
+        <div class="card">
+            <img [src]="producto.foto" class="card-img-top" height="200px">
+            <h5 class="card-title">{{producto.item}}</h5>
+            <div class="card-body">
+              <p class="card-text">Stock: x{{producto.stock}}</p>
+              <p class="card-text"><small class="text-muted">${{producto.precio}}</small></p>
+              <div class="contenedor">
+                <button class="btn btn-danger" (click)="borrarProducto(producto._id)"><i class="fas fa-trash-alt"></i></button>
+                <button class="btn btn-warning" (click)="actualizarProducto(producto._id)"><i class="fas fa-pen-square"></i></button>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

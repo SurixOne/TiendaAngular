@@ -1,0 +1,22 @@
+mi mail es martuslalv@hotmail.com, soy Edgardo Alvarez
+
+-pueden ingresar con el usuario SurixOne y clave poker1, o registrarse.
+
+-antes de loguearse pueden visualizar los items, registrarse y loguearse
+
+-se loguean con usuario y clave
+
+-no logueado: se restringe el administrar productos y la opcion de agregar
+ carrito junto con el boton del carrito
+
+-El registro y la sesion la hice toda entre el back y el front, pude encriptar pero tuve
+ que sacarlo porque no llegaba y necesitaba el logueo (lo deje en otra funcion a la cual
+ no llamo). El carrito agrega en el front.
+
+-al loguearse puede acceder al crud y a los botones de carrito, pero desaparecen las
+ opciones de registrarse y loguearse
+
+-el boton del carrito abre un popup que muestra los items agregados y el precio total
+
+RECUERDEN SCROLLEAR
+

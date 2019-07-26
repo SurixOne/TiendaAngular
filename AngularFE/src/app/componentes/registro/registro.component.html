@@ -1,0 +1,57 @@
+<div class="jumbotron my-5">
+<h3>{{ titulo }}</h3>
+    <form novalidate [formGroup]="form">
+        <div class="form-group">
+            <label for="usuario">Usuario</label>
+            <input class="form-control" formControlName="usuario" type="text" [(ngModel)]="datosRegistrosPost.usuario">
+        </div>
+        <div *ngIf="form.controls.usuario.errors && form.controls.usuario.dirty">
+            <div class="alert alert-danger" *ngIf="form.controls.usuario.errors.required">
+                Este campo es requerido!
+            </div>
+            <div class="alert alert-danger" *ngIf="form.controls.usuario.errors.minlength">
+                Se deben ingresar al menos 5 caracteres
+            </div>
+            <div class="alert alert-danger" *ngIf="form.controls.usuario.errors.maxlength">
+                Se deben ingresar como máximo 10 caracteres
+            </div>
+            <div class="alert alert-danger" *ngIf="form.controls.usuario.errors.conEspacios">
+                No se permiten espacios intermedios
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="correo">E-mail</label>
+            <input class="form-control" formControlName="correo" type="mail" [(ngModel)]="datosRegistrosPost.mail">
+        </div>
+        <div *ngIf="form.controls.correo.errors && form.controls.correo.dirty">
+            <div class="alert alert-danger" *ngIf="form.controls.correo.errors.required">
+                Este campo es requerido!
+            </div>
+            <div class="alert alert-danger" *ngIf="form.controls.correo.errors.email">
+                El formato no corresponde con el de un E-mail
+            </div>
+            <div class="alert alert-danger" *ngIf="form.controls.correo.errors.conEspacios">
+                No se permiten espacios intermedios
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="clave">Contraseña</label>
+            <input class="form-control" formControlName="clave" type="password" [(ngModel)]="datosRegistrosPost.clave">
+        </div>
+        <div *ngIf="form.controls.clave.errors && form.controls.clave.dirty">
+            <div class="alert alert-danger" *ngIf="form.controls.clave.errors.required">
+                Este campo es requerido!
+            </div>
+            <div class="alert alert-danger" *ngIf="form.controls.clave.errors.minlength">
+                Se deben ingresar al menos 5 caracteres
+            </div>
+            <div class="alert alert-danger" *ngIf="form.controls.clave.errors.maxlength">
+                Se deben ingresar como máximo 10 caracteres
+            </div>
+            <div class="alert alert-danger" *ngIf="form.controls.clave.errors.conEspacios">
+                No se permiten espacios intermedios
+            </div>
+        </div>
+            <input class="btn btn-primary my-3" [disabled]="!form.valid" type="button" routerLink="/logueo" (click)="registrarUsuario()" value="Registrarme">
+        </form>
+</div>
